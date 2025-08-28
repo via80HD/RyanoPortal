@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark Command Center</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Ryano Portal</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
     body {
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;          /* Center horizontally */
-  justify-content: flex-start;  /* Align to top vertically */
-  min-height: 100vh;
-  margin: 0;
-  background: url('https://raw.githubusercontent.com/via80HD/RyanoPortal/refs/heads/main/9e4c9c747b79f4a37eb615a543f43be1.jpg') no-repeat center center fixed;
-  background-size: cover;
-  padding: 20px;
-}
+      font-family: "Lucida Console", "Courier New", monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;   /* center header + buttons horizontally */
+      justify-content: flex-start;  
+      min-height: 100vh;
+      margin: 0;
+      background: url('https://raw.githubusercontent.com/via80HD/RyanoPortal/refs/heads/main/9e4c9c747b79f4a37eb615a543f43be1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      padding: 20px;
+    }
+
+    .header {
+      color: white;
+      text-align: center;
+      font-size: 36px;
+      margin: 20px 0 40px 0;
+      text-shadow: 0 0 10px rgba(0,255,255,0.8), 
+                   0 0 20px rgba(0,255,255,0.6), 
+                   0 0 40px rgba(0,255,255,0.4);
+    }
+
     .btn {
       width: 350px;
       max-width: 100%;
@@ -34,17 +44,21 @@
       border: 2px solid rgba(255,255,255,0.05);
       border-radius: 14px;
       backdrop-filter: blur(10px);
-      box-shadow: 0 0 15px rgba(0,0,0,0.6), 0 0 10px rgba(0,255,255,0.06);
+      box-shadow: 0 0 20px rgba(0,255,255,0.3), 
+                  0 0 40px rgba(0,255,255,0.1); /* constant glow */
       transition: all 0.3s ease;
       cursor: pointer;
       text-align: center;
-      align: top;
     }
 
     .btn:hover {
       transform: scale(1.04);
-      box-shadow: 0 0 20px rgba(0,255,255,0.3), 0 0 40px rgba(0,255,255,0.1);
-      background: linear-gradient(to bottom right, rgba(60,60,60,0.8), rgba(20,20,20,0.7));
+    }
+
+    .btn:active {
+      box-shadow: 0 0 25px rgba(0,255,0,0.6), 
+                  0 0 50px rgba(0,255,0,0.4);
+      background: linear-gradient(to bottom right, rgba(20,40,20,0.9), rgba(10,20,10,0.8));
     }
 
     /* Mobile tweaks */
@@ -57,22 +71,24 @@
         font-size: 18px;
         padding: 20px;
       }
+      .header {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <h1 class="header">Ryano Portal</h1>
 
   <button class="btn" onclick="window.open('https://form.jotform.com/252283251706050', '_blank')">
     Clock In / Out
   </button>
 
   <button class="btn" onclick="window.open('https://form.jotform.com/251823991040152', '_blank')">
-    Fill Out a Trip Sheet
+    Another Form
   </button>
 
-  <button class="btn" onclick="window.open('https://docs.google.com/spreadsheets/d/1yaKMGT1FQAugbJMvItiavw79J8qIzRBfmHMje6PC2-A/edit?usp=drivesdk', '_blank')">
-    Go To Reports
-  </button>
-  
 </body>
 </html>
